@@ -13,6 +13,7 @@ navToggle.addEventListener("click", () => {
   const open = navLinks.classList.toggle("open");
   navToggle.classList.toggle("open", open);
   navToggle.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("menu-open", open);
 });
 
 navLinks.addEventListener("click", (e) => {
@@ -20,6 +21,7 @@ navLinks.addEventListener("click", (e) => {
     navLinks.classList.remove("open");
     navToggle.classList.remove("open");
     navToggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
   }
 });
 
